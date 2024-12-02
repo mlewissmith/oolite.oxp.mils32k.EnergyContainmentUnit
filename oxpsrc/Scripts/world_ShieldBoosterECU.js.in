@@ -1,0 +1,77 @@
+// -*- javascript -*-
+// https://wiki.alioth.net/index.php/Oolite_JavaScript_Reference:_World_script_event_handlers
+//
+// Inspired by discussion at https://bb.oolite.space/viewtopic.php?p=284994#p284994
+// Original source released to public domain by 'hulo'
+
+"use strict";
+
+this.name        = "@OXP_TITLE@:world_ShieldBoosterECU";
+this.author      = "@OXP_AUTHOR@";
+this.copyright   = "(C) 2024 @OXP_AUTHOR@";
+this.licence     = "@OXP_LICENSE@";
+this.description = "@OXP_DESCRIPTION@";
+this.version     = "@OXP_VERSION@";
+
+////////////////////////////////////////////////////////////////////////////////
+// Debuggery
+
+this.$debug_enabled = true;
+this._log           = function(log_message) { log(this.name, log_message) }
+this._debug         = function(debug_message) { if (this.$debug_enabled) this._log(debug_message) }
+
+////////////////////////////////////////////////////////////////////////////////
+// Internals
+
+this.$active = false;
+
+this._activate = function() {
+    if ( !this.$active ) {
+        this.$active = true;
+        player.consoleMessage("Shield Booster ECU activated");
+    }
+}
+
+this._deactivate_and_lose = function() {
+    if ( this.$active ) {
+        this.$active = false;
+        player.ship.removeEquipment("EQ_ECU_SHIELD_BOOSTER_LICENCE");
+        player.consoleMessage("Shield Booster ECU Licence expired");
+    }
+}
+
+this._shieldBoosterECU = function() {
+    if ( this.$active ) {
+        player.ship.aftShield     = player.ship.maxAftShield;
+        player.ship.forwardShield = player.ship.maxForwardShield;
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Event handlers
+
+this.startUp = function() {
+    this._debug( "startUp()" );
+    this._debug( "name        : " + this.name );
+    this._debug( "author      : " + this.author );
+    this._debug( "copyright   : " + this.copyright );
+    this._debug( "license     : " + this.license );
+    this._debug( "description : " + this.description );
+    this._debug( "version     : " + this.version );
+}
+
+this.shipBeingAttacked = function(whom) {
+    this._shieldBoosterECU()
+}
+
+this.shipBeingAttackedByCloaked = function() {
+    this._shieldBoosterECU()
+}
+
+this.shipWillDockWithStation = function(station) {
+    this._deactivate_and_lose();
+}
+
+this.shipWillEnterWitchspace = function(cause, destination) {
+    this._deactivate_and_lose();
+}

@@ -40,9 +40,10 @@
             "available_to_player" = yes;
             "requires_clean"      = yes;
             "requires_equipment"  = "EQ_ECU_SHIELD_BOOSTER";
+            "script"              = "equip_ShieldBoosterECU_Licence.js";
             // see 'LoadoutByCategory:equipment-overrides.plist'
-            "sort_order"          = 17000;
-            "purchase_sort_order" = 17000;
+            "sort_order"          = 17100;
+            "purchase_sort_order" = 17100;
         }
     ),
 
@@ -84,8 +85,8 @@
             "requires_clean"      = yes;
             "requires_equipment"  = "EQ_ECU_PULSE_LASER";
             // see 'LoadoutByCategory:equipment-overrides.plist'
-            "sort_order"          = 17000;
-            "purchase_sort_order" = 17000;
+            "sort_order"          = 17100;
+            "purchase_sort_order" = 17100;
         }
     ),
 
@@ -127,8 +128,8 @@
             "requires_clean"      = yes;
             "requires_equipment"  = "EQ_ECU_BEAM_LASER";
             // see 'LoadoutByCategory:equipment-overrides.plist'
-            "sort_order"          = 17000;
-            "purchase_sort_order" = 17000;
+            "sort_order"          = 17100;
+            "purchase_sort_order" = 17100;
         }
     ),
 
@@ -169,8 +170,8 @@
             "requires_clean"      = yes;
             "requires_equipment"  = "EQ_ECU_MINING_LASER";
             // see 'LoadoutByCategory:equipment-overrides.plist'
-            "sort_order"          = 17000;
-            "purchase_sort_order" = 17000;
+            "sort_order"          = 17100;
+            "purchase_sort_order" = 17100;
         }
     ),
 
@@ -211,8 +212,8 @@
             "requires_clean"      = yes;
             "requires_equipment"  = "EQ_ECU_MILITARY_LASER";
             // see 'LoadoutByCategory:equipment-overrides.plist'
-            "sort_order"          = 17000;
-            "purchase_sort_order" = 17000;
+            "sort_order"          = 17100;
+            "purchase_sort_order" = 17100;
         }
     ),
 )

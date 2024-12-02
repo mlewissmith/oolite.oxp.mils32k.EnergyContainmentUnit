@@ -1,7 +1,8 @@
 fs = import('fs')
 
 infiles = [
-  'EnergyContainmentUnit.js.in',
+  'world_ShieldBoosterECU.js.in',
+  'equip_ShieldBoosterECU_Licence.js.in',
 ]
 
 foreach infile : infiles
