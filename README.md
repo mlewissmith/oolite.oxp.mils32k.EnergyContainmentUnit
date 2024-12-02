@@ -2,10 +2,10 @@
 
 Enhancements to [Standard Equipment](https://wiki.alioth.net/index.php/Oolite_Equipment)
 - [Shield Boosters](https://wiki.alioth.net/index.php/Shield_Boosters)
-- [Pulse Laser](https://wiki.alioth.net/index.php/Pulse_Laser)
-- [Beam Laser](https://wiki.alioth.net/index.php/Beam_Laser)
-- [Mining Laser](https://wiki.alioth.net/index.php/Mining_Laser)
-- [Military Laser](https://wiki.alioth.net/index.php/Military_Laser)
+- [Pulse Laser](https://wiki.alioth.net/index.php/Pulse_Laser) _[TODO]_
+- [Beam Laser](https://wiki.alioth.net/index.php/Beam_Laser) _[TODO]_
+- [Mining Laser](https://wiki.alioth.net/index.php/Mining_Laser) _[TODO]_
+- [Military Laser](https://wiki.alioth.net/index.php/Military_Laser) _[TODO]_
 
 ---
 
@@ -18,10 +18,10 @@ Enhancements to [Standard Equipment](https://wiki.alioth.net/index.php/Oolite_Eq
     Activation lasts
     - until next dock
     - until next hyperspace
-  - **Weapon ECU**  
+  - **Weapon ECU** _[TODO]_  
     such that player's weapon **does not overheat**  once activated.
     Requires **Weapon ECU License** to activate.
-  - **Weapon ECU License**  
+  - **Weapon ECU License** _[TODO]_  
     Required to activate **Weapon ECU**  
     Activation lasts
     - until next dock
