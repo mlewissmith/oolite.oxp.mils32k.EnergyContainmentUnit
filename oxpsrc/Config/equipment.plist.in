@@ -1,0 +1,91 @@
+// -*- javascript -*-
+// https://wiki.alioth.net/index.php/Equipment.plist
+// https://wiki.alioth.net/index.php/Oolite_JavaScript_Reference:_EquipmentInfo
+// .../oolite.app/Resources/Config/equipment.plist
+
+(
+    //     10, 147500, "Shield Boosters",
+    //     "EQ_SHIELD_BOOSTER",
+    //     "Shield boosting technology dramatically increases the capability of standard defensive shields.",
+    (
+        11,                       // TL-1
+        147500,                   // Cr*10
+        "Shield Boosters ECU",    // Name
+        "EQ_ECU_SHIELD_BOOSTER",  // ID
+        // Description
+        "Shield Booster Energy Containment Unit",
+        // Features:
+        {
+            "available_to_all"    = yes;
+            "available_to_NPCs"   = no;
+            "available_to_player" = yes;
+            "requires_clean"      = yes;
+            "requires_equipment"  = "EQ_SHIELD_BOOSTER";
+            // see 'LoadoutByCategory:equipment-overrides.plist'
+            "sort_order"          = 7204;
+            "purchase_sort_order" = 7204;
+        }
+    ),
+    (
+        4,                                // TL-1
+        30000,                            // Cr*10
+        "Shield Boosters ECU Licence",    // Name
+        "EQ_ECU_SHIELD_BOOSTER_LICENCE",  // ID
+        // Description
+        "Shield Booster ECU single use licence",
+        // Features:
+        {
+            "available_to_all"    = yes;
+            "available_to_NPCs"   = no;
+            "available_to_player" = yes;
+            "requires_clean"      = yes;
+            "requires_equipment"  = "EQ_ECU_SHIELD_BOOSTER";
+            // see 'LoadoutByCategory:equipment-overrides.plist'
+            "sort_order"          = 17000;
+            "purchase_sort_order" = 17000;
+        }
+    ),
+
+
+    //     10, 60000, "Military Laser",
+    //     "EQ_WEAPON_MILITARY_LASER",
+    //     "Increased power beam laser, developed for Naval use.",
+    (
+        11,                              // TL-1
+        60000,                           // Cr*10
+        "Military Laser ECU",            // Name
+        "EQ_ECU_MILITARY_LASER",         // ID
+        // Description
+        "Military Laser Energy Containment Unit",
+        // Features:
+        {
+            "available_to_all"    = yes;
+            "available_to_NPCs"   = no;
+            "available_to_player" = yes;
+            "requires_clean"      = yes;
+            "requires_equipment"  = "EQ_WEAPON_MILITARY_LASER";
+            // see 'LoadoutByCategory:equipment-overrides.plist'
+            "sort_order"          = 3348;
+            "purchase_sort_order" = 3348;
+        }
+    ),
+    (
+        12,                              // TL-1
+        60000,                           // Cr*10
+        "Military Laser ECU Licence",    // Name
+        "EQ_ECU_MILITARY_LASER_LICENCE", // ID
+        // Description
+        "Military Laser ECU single use licence",
+        // Features:
+        {
+            "available_to_all"    = yes;
+            "available_to_NPCs"   = no;
+            "available_to_player" = yes;
+            "requires_clean"      = yes;
+            "requires_equipment"  = "EQ_ECU_MILITARY_LASER";
+            // see 'LoadoutByCategory:equipment-overrides.plist'
+            "sort_order"          = 17000;
+            "purchase_sort_order" = 17000;
+        }
+    ),
+)

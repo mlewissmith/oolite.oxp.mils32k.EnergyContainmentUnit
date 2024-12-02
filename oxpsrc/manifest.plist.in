@@ -1,0 +1,24 @@
+// -*- javascript -*-
+// https://wiki.alioth.net/index.php/Manifest.plist
+
+{
+    /* REQUIRED */
+    title                   = "@OXP_TITLE@";
+    version                 = "@OXP_VERSION@";
+    description             = "@OXP_DESCRIPTION@";
+    category                = "@OXP_CATEGORY@";
+    identifier              = "@OXP_IDENTIFIER@";
+    required_oolite_version = "@OXP_OOLITE@";
+
+    /* OPTIONAL */
+    author                  = "@OXP_AUTHOR@";
+    information_url         = "@OXP_INFOURL@";
+    license                 = "@OXP_LICENSE@";
+    // maximum_oolite_version
+    // tags
+
+    /* DEPENDENCY MANAGEMENT */
+    // conflict_oxps
+    // optional_oxps
+    // requires_oxps
+}
