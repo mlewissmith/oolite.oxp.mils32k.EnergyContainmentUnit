@@ -24,7 +24,6 @@ this._debug         = function(debug_message) { if (this.$debug_enabled) this._l
 // Internals
 
 this.$active = false;
-this.$cheat = false;
 
 this._activate = function() {
     if ( !this.$active ) {
@@ -42,24 +41,9 @@ this._deactivate_and_lose = function() {
 }
 
 this._shieldBoosterECU = function() {
-    if ( this.$active || this.$cheat ) {
+    if ( this.$active ) {
         player.ship.aftShield     = player.ship.maxAftShield;
         player.ship.forwardShield = player.ship.maxForwardShield;
-    }
-}
-
-this.$shieldBoosterECU_config = {
-    Name: this.name,
-    Alias: "shieldBoosterECU",
-    Display: "Cheats",
-    Alive: "$shieldBoosterECU_config",
-    Reset: true,
-    Bool: {
-        B0: {
-            Name: "$cheat",
-            Def: false,
-            Desc: "Cheat",
-        },
     }
 }
 
@@ -77,10 +61,7 @@ this.startUp = function() {
 }
 
 this.startUpComplete = function() {
-    if (worldScripts.Lib_Config) {
-        this._debug( "Lib_Config._registerSet()" );
-        worldScripts.Lib_Config._registerSet( this.$shieldBoosterECU_config );
-    }
+    this._debug( "startUpComplete()" );
 }
 
 this.shipBeingAttacked = function(whom) {
