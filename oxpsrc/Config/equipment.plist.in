@@ -9,7 +9,7 @@
     // "Shield boosting technology dramatically increases the capability of standard defensive shields.",
     (
         11,                       // TL-1
-        147500,                   // Cr*10
+        29999,                    // Cr*10
         "Shield Boosters ECU",    // Name
         "EQ_ECU_SHIELD_BOOSTER",  // ID
         // Description
@@ -38,9 +38,10 @@
             "available_to_all"    = yes;
             "available_to_NPCs"   = no;
             "available_to_player" = yes;
+            "damage_probability"  = 0;
             "requires_clean"      = yes;
             "requires_equipment"  = "EQ_ECU_SHIELD_BOOSTER";
-            "script"              = "equip_ShieldBoosterECU_Licence.js";
+            "script"              = "EQ_ECU_SHIELD_BOOSTER_LICENCE.js";
             // see 'LoadoutByCategory:equipment-overrides.plist'
             "sort_order"          = 17100;
             "purchase_sort_order" = 17100;
@@ -82,6 +83,7 @@
             "available_to_all"    = yes;
             "available_to_NPCs"   = no;
             "available_to_player" = yes;
+            "damage_probability"  = 0;
             "requires_clean"      = yes;
             "requires_equipment"  = "EQ_ECU_PULSE_LASER";
             // see 'LoadoutByCategory:equipment-overrides.plist'
@@ -125,6 +127,7 @@
             "available_to_all"    = yes;
             "available_to_NPCs"   = no;
             "available_to_player" = yes;
+            "damage_probability"  = 0;
             "requires_clean"      = yes;
             "requires_equipment"  = "EQ_ECU_BEAM_LASER";
             // see 'LoadoutByCategory:equipment-overrides.plist'
@@ -167,6 +170,7 @@
             "available_to_all"    = yes;
             "available_to_NPCs"   = no;
             "available_to_player" = yes;
+            "damage_probability"  = 0;
             "requires_clean"      = yes;
             "requires_equipment"  = "EQ_ECU_MINING_LASER";
             // see 'LoadoutByCategory:equipment-overrides.plist'
@@ -209,6 +213,7 @@
             "available_to_all"    = yes;
             "available_to_NPCs"   = no;
             "available_to_player" = yes;
+            "damage_probability"  = 0;
             "requires_clean"      = yes;
             "requires_equipment"  = "EQ_ECU_MILITARY_LASER";
             // see 'LoadoutByCategory:equipment-overrides.plist'

@@ -1,8 +1,8 @@
 fs = import('fs')
 
 infiles = [
-  'equipment.plist.in',
   'world-scripts.plist.in',
+  'equipment.plist.in',
 ]
 
 foreach infile : infiles

@@ -6,7 +6,7 @@
 
 "use strict";
 
-this.name        = "@OXP_TITLE@:world_ShieldBoosterECU";
+this.name        = "@OXP_TITLE@:ShieldBoosterECU";
 this.author      = "@OXP_AUTHOR@";
 this.copyright   = "(C) 2024 @OXP_AUTHOR@";
 this.licence     = "@OXP_LICENSE@";
@@ -25,22 +25,35 @@ this._debug         = function(debug_message) { if (this.$debug_enabled) this._l
 
 this.$active = false;
 
-this._activate = function() {
+this._activateECU = function() {
     if ( !this.$active ) {
         this.$active = true;
-        player.consoleMessage("Shield Booster ECU activated");
+        this._debug( "_activateECU()" );
+        player.consoleMessage("Shield Booster ECU: activated");
     }
 }
 
-this._deactivate_and_lose = function() {
+this._deactivateECU = function() {
     if ( this.$active ) {
         this.$active = false;
-        player.ship.removeEquipment("EQ_ECU_SHIELD_BOOSTER_LICENCE");
-        player.consoleMessage("Shield Booster ECU Licence expired");
+        this._debug( "_deactivateECU()" );
+        player.consoleMessage("Shield Booster ECU: deactivated");
     }
 }
 
-this._shieldBoosterECU = function() {
+this._loseLicence = function() {
+    player.ship.removeEquipment("EQ_ECU_SHIELD_BOOSTER_LICENCE");
+}
+
+this._expireLicence = function() {
+    if ( this.$active ) {
+        this._deactivateECU();
+        this._loseLicence();
+        player.consoleMessage("Shield Booster ECU: licence expired");
+    }
+}
+
+this._handleECU = function() {
     if ( this.$active ) {
         player.ship.aftShield     = player.ship.maxAftShield;
         player.ship.forwardShield = player.ship.maxForwardShield;
@@ -65,17 +78,42 @@ this.startUpComplete = function() {
 }
 
 this.shipBeingAttacked = function(whom) {
-    this._shieldBoosterECU()
+    this._handleECU()
 }
 
 this.shipBeingAttackedByCloaked = function() {
-    this._shieldBoosterECU()
+    this._handleECU()
 }
 
 this.shipWillDockWithStation = function(station) {
-    this._deactivate_and_lose();
+    this._expireLicence();
 }
 
 this.shipWillEnterWitchspace = function(cause, destination) {
-    this._deactivate_and_lose();
+    this._expireLicence();
 }
+
+this.equipmentAdded = function(equipmentKey) {
+    if (equipmentKey == "EQ_ECU_SHIELD_BOOSTER") {
+        this._debug('equipmentAdded("EQ_ECU_SHIELD_BOOSTER")');
+    }
+    if (equipmentKey == "EQ_ECU_SHIELD_BOOSTER_LICENCE") {
+        this._debug('equipmentAdded("EQ_ECU_SHIELD_BOOSTER_LICENCE")');
+    }
+}
+
+this.equipmentRemoved = function(equipmentKey) {
+    if (equipmentKey == "EQ_SHIELD_BOOSTER") {
+        this._debug('equipmentRemoved("EQ_SHIELD_BOOSTER")');
+        player.ship.removeEquipment("EQ_ECU_SHIELD_BOOSTER");
+    }
+    if (equipmentKey == "EQ_ECU_SHIELD_BOOSTER") {
+        this._debug('equipmentRemoved("EQ_ECU_SHIELD_BOOSTER")');
+        this._loseLicence();
+    }
+    if (equipmentKey == "EQ_ECU_SHIELD_BOOSTER_LICENCE") {
+        this._debug('equipmentRemoved("EQ_ECU_SHIELD_BOOSTER_LICENCE")');
+    }
+}
+
+

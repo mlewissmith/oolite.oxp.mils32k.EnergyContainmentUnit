@@ -19,7 +19,7 @@ oxp_cfg_data = configuration_data(
     'OXP_IDENTIFIER'  : PROJECT_ID,
     'OXP_VERSION'     : PROJECT_VERSION,
     'OXP_LICENSE'     : PROJECT_LICENSE,
-    'OXP_OOLITE'      : '1.90',
+    'OXP_OOLITE'      : '1.81',
     'OXP_CATEGORY'    : 'Misc',
     'OXP_INFOURL'     : '[TODO]',
   }

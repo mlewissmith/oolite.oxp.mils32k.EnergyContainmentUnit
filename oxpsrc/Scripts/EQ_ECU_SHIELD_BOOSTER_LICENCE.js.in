@@ -1,0 +1,34 @@
+// -*- javascript -*-
+// https://wiki.alioth.net/index.php/Oolite_JavaScript_Reference:_Equipment_scripts
+
+"use strict";
+
+this.name        = "@OXP_TITLE@:EQ_ECU_SHIELD_BOOSTER_LICENCE";
+this.author      = "@OXP_AUTHOR@";
+this.copyright   = "(C) 2024 @OXP_AUTHOR@";
+this.licence     = "@OXP_LICENSE@";
+this.description = "@OXP_DESCRIPTION@";
+this.version     = "@OXP_VERSION@";
+
+
+this.$worldscriptName = "@OXP_TITLE@:ShieldBoosterECU";
+this.$worldscript     = worldScripts[this.$worldscriptName];
+this.$debug_enabled   = true;
+this._log             = function(log_message) { log(this.name, log_message) }
+this._debug           = function(debug_message) { if (this.$debug_enabled) this._log(debug_message) }
+
+
+this.activated = function() {
+    this.$worldscript._activateECU();
+}
+
+this.mode = function() {
+    this._debug( "mode()" );
+    this._debug( "name        : " + this.name );
+    this._debug( "author      : " + this.author );
+    this._debug( "copyright   : " + this.copyright );
+    this._debug( "license     : " + this.license );
+    this._debug( "description : " + this.description );
+    this._debug( "version     : " + this.version );
+    this._debug( "EQ_ECU_SHIELD_BOOSTER_LICENCE:" + (this.$worldscript.$active ? "ACTIVE" : "INACTIVE") );
+}
