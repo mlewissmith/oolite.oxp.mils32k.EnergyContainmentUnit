@@ -40,7 +40,7 @@
             "available_to_NPCs"      = no;
             "available_to_player"    = yes;
             "portable_between_ships" = no;
-            "requires_clean"         = yes;
+            "requires_clean"         = no;
             "requires_equipment"     = "EQ_ECU_SHIELD_BOOSTER";
             "visible"                = no;
             // see 'LoadoutByCategory:equipment-overrides.plist'
@@ -64,6 +64,7 @@
             "portable_between_ships" = no;
             "requires_clean"         = yes;
             "requires_equipment"     = "EQ_ECU_SHIELD_BOOSTER";
+            "script"                 = "EQ_ECU_SHIELD_BOOSTER_LICENCE.js";
             // see 'LoadoutByCategory:equipment-overrides.plist'
             "sort_order"             = 17100;
             "purchase_sort_order"    = 17100;
@@ -83,36 +84,36 @@
         "Pulse Laser Energy Containment Unit",
         // Features:
         {
-            "available_to_all"    = yes;
-            "available_to_NPCs"   = no;
-            "available_to_player" = yes;
+            "available_to_all"       = yes;
+            "available_to_NPCs"      = no;
+            "available_to_player"    = yes;
             "portable_between_ships" = no;
-            "requires_clean"      = yes;
-            "requires_equipment"  = "EQ_WEAPON_PULSE_LASER";
+            "requires_clean"         = yes;
+            "requires_equipment"     = "EQ_WEAPON_PULSE_LASER";
             // see 'LoadoutByCategory:equipment-overrides.plist'
-            "sort_order"          = 3292;
-            "purchase_sort_order" = 3292;
+            "sort_order"             = 3292;
+            "purchase_sort_order"    = 3292;
         }
     ),
     (
         3,                             // TL-1
         3000,                          // Cr*10
-        "Pulse Laser ECU Licence", // Name
+        "Pulse Laser ECU Licence",     // Name
         "EQ_ECU_PULSE_LASER_LICENCE",  // ID
         // Description
         "Pulse Laser ECU single use licence",
         // Features:
         {
-            "available_to_all"    = yes;
-            "available_to_NPCs"   = no;
-            "available_to_player" = yes;
-            "damage_probability"  = 0;
+            "available_to_all"       = yes;
+            "available_to_NPCs"      = no;
+            "available_to_player"    = yes;
+            "damage_probability"     = 0;
             "portable_between_ships" = no;
-            "requires_clean"      = yes;
-            "requires_equipment"  = "EQ_ECU_PULSE_LASER";
+            "requires_clean"         = yes;
+            "requires_equipment"     = "EQ_ECU_PULSE_LASER";
             // see 'LoadoutByCategory:equipment-overrides.plist'
-            "sort_order"          = 17100;
-            "purchase_sort_order" = 17100;
+            "sort_order"             = 17100;
+            "purchase_sort_order"    = 17100;
         }
     ),
 
@@ -129,15 +130,15 @@
         "Beam Laser Energy Containment Unit",
         // Features:
         {
-            "available_to_all"    = yes;
-            "available_to_NPCs"   = no;
-            "available_to_player" = yes;
+            "available_to_all"       = yes;
+            "available_to_NPCs"      = no;
+            "available_to_player"    = yes;
             "portable_between_ships" = no;
-            "requires_clean"      = yes;
-            "requires_equipment"  = "EQ_WEAPON_BEAM_LASER";
+            "requires_clean"         = yes;
+            "requires_equipment"     = "EQ_WEAPON_BEAM_LASER";
             // see 'LoadoutByCategory:equipment-overrides.plist'
-            "sort_order"          = 3300;
-            "purchase_sort_order" = 3300;
+            "sort_order"             = 3300;
+            "purchase_sort_order"    = 3300;
         }
     ),
     (
@@ -149,16 +150,16 @@
         "Beam Laser ECU single use licence",
         // Features:
         {
-            "available_to_all"    = yes;
-            "available_to_NPCs"   = no;
-            "available_to_player" = yes;
-            "damage_probability"  = 0;
+            "available_to_all"       = yes;
+            "available_to_NPCs"      = no;
+            "available_to_player"    = yes;
+            "damage_probability"     = 0;
             "portable_between_ships" = no;
-            "requires_clean"      = yes;
-            "requires_equipment"  = "EQ_ECU_BEAM_LASER";
+            "requires_clean"         = yes;
+            "requires_equipment"     = "EQ_ECU_BEAM_LASER";
             // see 'LoadoutByCategory:equipment-overrides.plist'
-            "sort_order"          = 17100;
-            "purchase_sort_order" = 17100;
+            "sort_order"             = 17100;
+            "purchase_sort_order"    = 17100;
         }
     ),
 
@@ -174,15 +175,15 @@
         "Mining Laser Energy Containment Unit",
         // Features:
         {
-            "available_to_all"    = yes;
-            "available_to_NPCs"   = no;
-            "available_to_player" = yes;
+            "available_to_all"       = yes;
+            "available_to_NPCs"      = no;
+            "available_to_player"    = yes;
             "portable_between_ships" = no;
-            "requires_clean"      = yes;
-            "requires_equipment"  = "EQ_WEAPON_MINING_LASER";
+            "requires_clean"         = yes;
+            "requires_equipment"     = "EQ_WEAPON_MINING_LASER";
             // see 'LoadoutByCategory:equipment-overrides.plist'
-            "sort_order"          = 3336;
-            "purchase_sort_order" = 3336;
+            "sort_order"             = 3336;
+            "purchase_sort_order"    = 3336;
         }
     ),
     (
@@ -194,16 +195,16 @@
         "Mining Laser ECU single use licence",
         // Features:
         {
-            "available_to_all"    = yes;
-            "available_to_NPCs"   = no;
-            "available_to_player" = yes;
-            "damage_probability"  = 0;
+            "available_to_all"       = yes;
+            "available_to_NPCs"      = no;
+            "available_to_player"    = yes;
+            "damage_probability"     = 0;
             "portable_between_ships" = no;
-            "requires_clean"      = yes;
-            "requires_equipment"  = "EQ_ECU_MINING_LASER";
+            "requires_clean"         = yes;
+            "requires_equipment"     = "EQ_ECU_MINING_LASER";
             // see 'LoadoutByCategory:equipment-overrides.plist'
-            "sort_order"          = 17100;
-            "purchase_sort_order" = 17100;
+            "sort_order"             = 17100;
+            "purchase_sort_order"    = 17100;
         }
     ),
 
@@ -212,43 +213,64 @@
     // "Increased power beam laser, developed for Naval use.",
     (
         11,                      // TL-1
-        60000,                   // Cr*10
+        20000,                   // Cr*10
         "Military Laser ECU",    // Name
         "EQ_ECU_MILITARY_LASER", // ID
         // Description
         "Military Laser Energy Containment Unit",
         // Features:
         {
-            "available_to_all"    = yes;
-            "available_to_NPCs"   = no;
-            "available_to_player" = yes;
+            "available_to_all"       = yes;
+            "available_to_NPCs"      = no;
+            "available_to_player"    = yes;
             "portable_between_ships" = no;
-            "requires_clean"      = yes;
-            "requires_equipment"  = "EQ_WEAPON_MILITARY_LASER";
+            "requires_clean"         = yes;
+            "requires_equipment"     = "EQ_WEAPON_MILITARY_LASER";
             // see 'LoadoutByCategory:equipment-overrides.plist'
-            "sort_order"          = 3348;
-            "purchase_sort_order" = 3348;
+            "sort_order"             = 3348;
+            "purchase_sort_order"    = 3348;
+        }
+    ),
+    (
+        11,                              // TL-1
+        0,                               // Cr*10
+        "Military Laser ECU",            // Name
+        "EQ_ECU_MILITARY_LASER_REMOVAL", // ID
+        // Description
+        "Remove Military Laser ECU, refund 60% purchase cost",
+        // Features:
+        {
+            "available_to_all"       = yes;
+            "available_to_NPCs"      = no;
+            "available_to_player"    = yes;
+            "portable_between_ships" = no;
+            "requires_clean"         = no;
+            "requires_equipment"     = "EQ_ECU_WEAPON_MILITARY_LASER";
+            "visible"                = no;
+            // see 'LoadoutByCategory:equipment-overrides.plist'
+            "sort_order"             = 3348;
+            "purchase_sort_order"    = 3348;
         }
     ),
     (
         3,                               // TL-1
-        3000,                            // Cr*10
+        2000,                            // Cr*10
         "Military Laser ECU Licence",    // Name
         "EQ_ECU_MILITARY_LASER_LICENCE", // ID
         // Description
         "Military Laser ECU single use licence",
         // Features:
         {
-            "available_to_all"    = yes;
-            "available_to_NPCs"   = no;
-            "available_to_player" = yes;
-            "damage_probability"  = 0;
+            "available_to_all"       = yes;
+            "available_to_NPCs"      = no;
+            "available_to_player"    = yes;
+            "damage_probability"     = 0;
             "portable_between_ships" = no;
-            "requires_clean"      = yes;
-            "requires_equipment"  = "EQ_ECU_MILITARY_LASER";
+            "requires_clean"         = yes;
+            "requires_equipment"     = "EQ_ECU_MILITARY_LASER";
             // see 'LoadoutByCategory:equipment-overrides.plist'
-            "sort_order"          = 17100;
-            "purchase_sort_order" = 17100;
+            "sort_order"             = 17100;
+            "purchase_sort_order"    = 17100;
         }
     ),
 )
