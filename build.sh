@@ -1,5 +1,5 @@
 #!/bin/bash
-set -uex
+set -ue
 
 workdir=$(dirname $0)
 builddir=${workdir}/meson.build.d
@@ -10,15 +10,17 @@ xmode="build"
 usage() {
     cat<<EOF
 Usage:
-$0 [ -O BUILDDIR ] [ -RCW ] target...
--O BUILDDIR : define output builddir ($builddir)
--R : rm BUILDDIR
--C : meson setup --reconfigure
--W : meson setup --wipe
+$0 [ -O BUILDDIR ] [ -RCW ] TARGET...
+   -O BUILDDIR : define output builddir ($builddir)
+   -R : rm BUILDDIR
+   -C : meson setup --reconfigure
+   -W : meson setup --wipe
+
+$0 -X tag TAG
 EOF
 }
 
-while getopts O:RCWX: opt
+while getopts O:RCWX:h opt
 do
     case $opt in
         O) builddir=$OPTARG ;;
@@ -26,6 +28,7 @@ do
         C) meson_setup_opts+="--reconfigure " ;;
         W) meson_setup_opts+="--wipe " ;;
         X) xmode=$OPTARG ;;
+        h) usage ; exit 0 ;;
         *) usage ; exit 1 ;;
     esac
 done
