@@ -13,7 +13,7 @@
         "Shield Boosters ECU",    // Name
         "EQ_ECU_SHIELD_BOOSTER",  // ID
         // Description
-        "Shield Boosters Energy Containment Unit",
+        "Shield Boosters Energy Containment Unit.  Absorbs energy due to laser fire, recharges fore and aft shields.  Requires 'Shield Boosters ECU Licence' to activate.",
         // Features:
         {
             "available_to_all"       = yes;

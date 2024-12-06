@@ -1,7 +1,7 @@
 project(
   'oolite.oxp.EnergyContainmentUnit',
   license       : 'UNLICENSE',
-  version       : '0.0.2',
+  version       : '0.0.3',
 )
 
 PROJECT_NAME     = meson.project_name()
