@@ -9,7 +9,7 @@
     // "Shield boosting technology dramatically increases the capability of standard defensive shields.",
     (
         11,                       // TL-1
-        30000,                    // Cr*10
+        49000,                    // Cr*10 (~1/3 cost of Shield Booster)
         "Shield Boosters ECU",    // Name
         "EQ_ECU_SHIELD_BOOSTER",  // ID
         // Description
@@ -50,7 +50,7 @@
     ),
     (
         3,                                // TL-1
-        3000,                             // Cr*10
+        5000,                             // Cr*10 (~1/10 cost of Shield Booster ECU)
         "Shield Boosters ECU Licence",    // Name
         "EQ_ECU_SHIELD_BOOSTER_LICENCE",  // ID
         // Description
