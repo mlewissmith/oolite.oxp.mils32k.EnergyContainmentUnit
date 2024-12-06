@@ -45,7 +45,7 @@ this._loseLicence = function() {
     player.ship.removeEquipment("EQ_ECU_SHIELD_BOOSTER_LICENCE");
 }
 
-this._expireLicence = function() {
+this._expireActiveLicence = function() {
     if ( this.$active ) {
         this._deactivateECU();
         this._loseLicence();
@@ -86,34 +86,29 @@ this.shipBeingAttackedByCloaked = function() {
 }
 
 this.shipWillDockWithStation = function(station) {
-    this._expireLicence();
+    this._expireActiveLicence();
 }
 
 this.shipWillEnterWitchspace = function(cause, destination) {
-    this._expireLicence();
+    this._expireActiveLicence();
 }
 
 this.equipmentAdded = function(equipmentKey) {
-    if (equipmentKey == "EQ_ECU_SHIELD_BOOSTER") {
-        this._debug('equipmentAdded("EQ_ECU_SHIELD_BOOSTER")');
+    this._debug('equipmentAdded("' + equipmentKey +'")');
+}
+
+this.equipmentDamaged = function(equipmentKey) {
+    this._debug('equipmentDamaged("' + equipmentKey +'")');
+    if (equipmentKey == "EQ_SHIELD_BOOSTER") {
+        player.ship.setEquipmentStatus("EQ_ECU_SHIELD_BOOSTER", "EQUIPMENT_DAMAGED");
     }
-    if (equipmentKey == "EQ_ECU_SHIELD_BOOSTER_LICENCE") {
-        this._debug('equipmentAdded("EQ_ECU_SHIELD_BOOSTER_LICENCE")');
+    if (equipmentKey == "EQ_ECU_SHIELD_BOOSTER") {
+        this._expireActiveLicence();
+        this._loseLicence();
     }
 }
 
 this.equipmentRemoved = function(equipmentKey) {
-    if (equipmentKey == "EQ_SHIELD_BOOSTER") {
-        this._debug('equipmentRemoved("EQ_SHIELD_BOOSTER")');
-        player.ship.removeEquipment("EQ_ECU_SHIELD_BOOSTER");
-    }
-    if (equipmentKey == "EQ_ECU_SHIELD_BOOSTER") {
-        this._debug('equipmentRemoved("EQ_ECU_SHIELD_BOOSTER")');
-        this._loseLicence();
-    }
-    if (equipmentKey == "EQ_ECU_SHIELD_BOOSTER_LICENCE") {
-        this._debug('equipmentRemoved("EQ_ECU_SHIELD_BOOSTER_LICENCE")');
-    }
+    this._debug('equipmentRemoved("' + equipmentKey +'")');
 }
-
 

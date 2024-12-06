@@ -19,6 +19,7 @@
             "available_to_all"    = yes;
             "available_to_NPCs"   = no;
             "available_to_player" = yes;
+            "portable_between_ships" = no;
             "requires_clean"      = yes;
             "requires_equipment"  = "EQ_SHIELD_BOOSTER";
             // see 'LoadoutByCategory:equipment-overrides.plist'
@@ -39,6 +40,7 @@
             "available_to_NPCs"   = no;
             "available_to_player" = yes;
             "damage_probability"  = 0;
+            "portable_between_ships" = no;
             "requires_clean"      = yes;
             "requires_equipment"  = "EQ_ECU_SHIELD_BOOSTER";
             "script"              = "EQ_ECU_SHIELD_BOOSTER_LICENCE.js";
@@ -64,6 +66,7 @@
             "available_to_all"    = yes;
             "available_to_NPCs"   = no;
             "available_to_player" = yes;
+            "portable_between_ships" = no;
             "requires_clean"      = yes;
             "requires_equipment"  = "EQ_WEAPON_PULSE_LASER";
             // see 'LoadoutByCategory:equipment-overrides.plist'
@@ -84,6 +87,7 @@
             "available_to_NPCs"   = no;
             "available_to_player" = yes;
             "damage_probability"  = 0;
+            "portable_between_ships" = no;
             "requires_clean"      = yes;
             "requires_equipment"  = "EQ_ECU_PULSE_LASER";
             // see 'LoadoutByCategory:equipment-overrides.plist'
@@ -108,6 +112,7 @@
             "available_to_all"    = yes;
             "available_to_NPCs"   = no;
             "available_to_player" = yes;
+            "portable_between_ships" = no;
             "requires_clean"      = yes;
             "requires_equipment"  = "EQ_WEAPON_BEAM_LASER";
             // see 'LoadoutByCategory:equipment-overrides.plist'
@@ -128,6 +133,7 @@
             "available_to_NPCs"   = no;
             "available_to_player" = yes;
             "damage_probability"  = 0;
+            "portable_between_ships" = no;
             "requires_clean"      = yes;
             "requires_equipment"  = "EQ_ECU_BEAM_LASER";
             // see 'LoadoutByCategory:equipment-overrides.plist'
@@ -151,6 +157,7 @@
             "available_to_all"    = yes;
             "available_to_NPCs"   = no;
             "available_to_player" = yes;
+            "portable_between_ships" = no;
             "requires_clean"      = yes;
             "requires_equipment"  = "EQ_WEAPON_MINING_LASER";
             // see 'LoadoutByCategory:equipment-overrides.plist'
@@ -171,6 +178,7 @@
             "available_to_NPCs"   = no;
             "available_to_player" = yes;
             "damage_probability"  = 0;
+            "portable_between_ships" = no;
             "requires_clean"      = yes;
             "requires_equipment"  = "EQ_ECU_MINING_LASER";
             // see 'LoadoutByCategory:equipment-overrides.plist'
@@ -194,6 +202,7 @@
             "available_to_all"    = yes;
             "available_to_NPCs"   = no;
             "available_to_player" = yes;
+            "portable_between_ships" = no;
             "requires_clean"      = yes;
             "requires_equipment"  = "EQ_WEAPON_MILITARY_LASER";
             // see 'LoadoutByCategory:equipment-overrides.plist'
@@ -214,6 +223,7 @@
             "available_to_NPCs"   = no;
             "available_to_player" = yes;
             "damage_probability"  = 0;
+            "portable_between_ships" = no;
             "requires_clean"      = yes;
             "requires_equipment"  = "EQ_ECU_MILITARY_LASER";
             // see 'LoadoutByCategory:equipment-overrides.plist'
