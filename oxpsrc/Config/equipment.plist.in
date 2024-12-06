@@ -9,22 +9,43 @@
     // "Shield boosting technology dramatically increases the capability of standard defensive shields.",
     (
         11,                       // TL-1
-        29999,                    // Cr*10
+        30000,                    // Cr*10
         "Shield Boosters ECU",    // Name
         "EQ_ECU_SHIELD_BOOSTER",  // ID
         // Description
-        "Shield Booster Energy Containment Unit",
+        "Shield Boosters Energy Containment Unit",
         // Features:
         {
-            "available_to_all"    = yes;
-            "available_to_NPCs"   = no;
-            "available_to_player" = yes;
+            "available_to_all"       = yes;
+            "available_to_NPCs"      = no;
+            "available_to_player"    = yes;
             "portable_between_ships" = no;
-            "requires_clean"      = yes;
-            "requires_equipment"  = "EQ_SHIELD_BOOSTER";
+            "requires_clean"         = yes;
+            "requires_equipment"     = "EQ_SHIELD_BOOSTER";
             // see 'LoadoutByCategory:equipment-overrides.plist'
-            "sort_order"          = 7204;
-            "purchase_sort_order" = 7204;
+            "sort_order"             = 7204;
+            "purchase_sort_order"    = 7204;
+        }
+    ),
+    (
+        11,                               // TL-1
+        0,                                // Cr*10
+        "Remove Shield Boosters ECU",     // Name
+        "EQ_ECU_SHIELD_BOOSTER_REMOVAL",  // ID
+        // Description
+        "Remove Shield Boosters ECU, refund 60% purchase cost",
+        // Features:
+        {
+            "available_to_all"       = yes;
+            "available_to_NPCs"      = no;
+            "available_to_player"    = yes;
+            "portable_between_ships" = no;
+            "requires_clean"         = yes;
+            "requires_equipment"     = "EQ_ECU_SHIELD_BOOSTER";
+            "visible"                = no;
+            // see 'LoadoutByCategory:equipment-overrides.plist'
+            "sort_order"             = 7204;
+            "purchase_sort_order"    = 7204;
         }
     ),
     (
@@ -33,20 +54,19 @@
         "Shield Boosters ECU Licence",    // Name
         "EQ_ECU_SHIELD_BOOSTER_LICENCE",  // ID
         // Description
-        "Shield Booster ECU single use licence",
+        "Shield Boosters ECU single use licence",
         // Features:
         {
-            "available_to_all"    = yes;
-            "available_to_NPCs"   = no;
-            "available_to_player" = yes;
-            "damage_probability"  = 0;
+            "available_to_all"       = yes;
+            "available_to_NPCs"      = no;
+            "available_to_player"    = yes;
+            "damage_probability"     = 0;
             "portable_between_ships" = no;
-            "requires_clean"      = yes;
-            "requires_equipment"  = "EQ_ECU_SHIELD_BOOSTER";
-            "script"              = "EQ_ECU_SHIELD_BOOSTER_LICENCE.js";
+            "requires_clean"         = yes;
+            "requires_equipment"     = "EQ_ECU_SHIELD_BOOSTER";
             // see 'LoadoutByCategory:equipment-overrides.plist'
-            "sort_order"          = 17100;
-            "purchase_sort_order" = 17100;
+            "sort_order"             = 17100;
+            "purchase_sort_order"    = 17100;
         }
     ),
 

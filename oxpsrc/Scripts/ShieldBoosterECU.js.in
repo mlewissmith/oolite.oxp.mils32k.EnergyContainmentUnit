@@ -77,6 +77,8 @@ this.startUpComplete = function() {
     this._debug( "startUpComplete()" );
 }
 
+////////////////////////////////////////////////////////////////////////////////
+
 this.shipBeingAttacked = function(whom) {
     this._handleECU()
 }
@@ -93,12 +95,14 @@ this.shipWillEnterWitchspace = function(cause, destination) {
     this._expireActiveLicence();
 }
 
+////////////////////////////////////////////////////////////////////////////////
+
 this.equipmentAdded = function(equipmentKey) {
-    this._debug('equipmentAdded("' + equipmentKey +'")');
+    this._debug('equipmentAdded(' + equipmentKey +')');
 }
 
 this.equipmentDamaged = function(equipmentKey) {
-    this._debug('equipmentDamaged("' + equipmentKey +'")');
+    this._debug('equipmentDamaged(' + equipmentKey +')');
     if (equipmentKey == "EQ_SHIELD_BOOSTER") {
         player.ship.setEquipmentStatus("EQ_ECU_SHIELD_BOOSTER", "EQUIPMENT_DAMAGED");
     }
@@ -109,6 +113,19 @@ this.equipmentDamaged = function(equipmentKey) {
 }
 
 this.equipmentRemoved = function(equipmentKey) {
-    this._debug('equipmentRemoved("' + equipmentKey +'")');
+    this._debug('equipmentRemoved(' + equipmentKey +')');
 }
 
+this.playerBoughtEquipment = function(equipment, paid) {
+    this._debug( 'playerBoughtEquipment(' + equipment + ',' + paid + ')' );
+    if (equipment == "EQ_ECU_SHIELD_BOOSTER_REMOVAL") {
+        var credits = EquipmentInfo.infoForKey("EQ_ECU_SHIELD_BOOSTER").price * 0.1;
+        var refundPc = 0.6;
+        var refundCredits = credits * refundPc;
+
+        this._loseLicence();
+        player.ship.removeEquipment("EQ_ECU_SHIELD_BOOSTER");
+        player.ship.removeEquipment("EQ_ECU_SHIELD_BOOSTER_REMOVAL");
+        player.credits += refundCredits;
+    }
+}
