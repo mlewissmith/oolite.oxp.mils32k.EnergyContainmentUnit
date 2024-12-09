@@ -10,14 +10,21 @@ this.licence     = "@OXP_LICENSE@";
 this.description = "@OXP_DESCRIPTION@";
 this.version     = "@OXP_VERSION@";
 
-
-this.$worldscriptName = "@OXP_TITLE@:ShieldBoosterECU";
-this.$worldscript     = worldScripts[this.$worldscriptName];
+////////////////////////////////////////////////////////////////////////////////
+// Debuggery
 
 this.$debug_enabled   = false;
 this._log             = function(log_message) { log(this.name, log_message) }
 this._debug           = function(debug_message) { if (this.$debug_enabled) this._log(debug_message) }
 
+////////////////////////////////////////////////////////////////////////////////
+// Internals
+
+this.$worldscriptName = "@OXP_TITLE@:ShieldBoosterECU";
+this.$worldscript     = worldScripts[this.$worldscriptName];
+
+////////////////////////////////////////////////////////////////////////////////
+// Event handlers
 
 this.activated = function() {
     this.$worldscript._activateECU();
