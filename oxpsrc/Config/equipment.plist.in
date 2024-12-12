@@ -11,7 +11,7 @@
         11,                       // TL-1
         49000,                    // Cr*10 (~1/3 cost of Shield Booster)
         "Shield Boosters ECU",    // Name
-        "EQ_ECU_SHIELD_BOOSTER",  // ID
+        "EQ_ECU_SHIELDBOOSTERS",  // ID
         // Description
         "Shield Boosters Energy Containment Unit.  Absorbs energy due to laser fire, recharges fore and aft shields.  Requires 'Shield Boosters ECU Licence' to activate.",
         // Features:
@@ -31,7 +31,7 @@
         11,                               // TL-1
         0,                                // Cr*10
         "Remove Shield Boosters ECU",     // Name
-        "EQ_ECU_SHIELD_BOOSTER_REMOVAL",  // ID
+        "EQ_ECU_SHIELDBOOSTERS_REMOVAL",  // ID
         // Description
         "Remove Shield Boosters ECU, refund 60% purchase cost",
         // Features:
@@ -41,7 +41,7 @@
             "available_to_player"    = yes;
             "portable_between_ships" = no;
             "requires_clean"         = no;
-            "requires_equipment"     = "EQ_ECU_SHIELD_BOOSTER";
+            "requires_equipment"     = "EQ_ECU_SHIELDBOOSTERS";
             "visible"                = no;
             // see 'LoadoutByCategory:equipment-overrides.plist'
             "sort_order"             = 7204;
@@ -52,7 +52,7 @@
         3,                                // TL-1
         5000,                             // Cr*10 (~1/10 cost of Shield Booster ECU)
         "Shield Boosters ECU Licence",    // Name
-        "EQ_ECU_SHIELD_BOOSTER_LICENCE",  // ID
+        "EQ_ECU_SHIELDBOOSTERS_LICENCE",  // ID
         // Description
         "Shield Boosters ECU single use licence",
         // Features:
@@ -63,8 +63,8 @@
             "damage_probability"     = 0;
             "portable_between_ships" = no;
             "requires_clean"         = yes;
-            "requires_equipment"     = "EQ_ECU_SHIELD_BOOSTER";
-            "script"                 = "EQ_ECU_SHIELD_BOOSTER_LICENCE.js";
+            "requires_equipment"     = "EQ_ECU_SHIELDBOOSTERS";
+            "script"                 = "EQ_ECU_SHIELDBOOSTERS_LICENCE.js";
             // see 'LoadoutByCategory:equipment-overrides.plist'
             "sort_order"             = 17100;
             "purchase_sort_order"    = 17100;

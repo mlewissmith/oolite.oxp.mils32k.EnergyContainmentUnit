@@ -1,8 +1,8 @@
 fs = import('fs')
 
 infiles = [
-  'ShieldBoosterECU.js.in',
-  'EQ_ECU_SHIELD_BOOSTER_LICENCE.js.in',
+  'ShieldBoostersECU.js.in',
+  'EQ_ECU_SHIELDBOOSTERS_LICENCE.js.in',
 ]
 
 foreach infile : infiles
