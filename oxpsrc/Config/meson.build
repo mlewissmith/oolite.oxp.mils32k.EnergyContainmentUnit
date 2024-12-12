@@ -3,6 +3,7 @@ fs = import('fs')
 infiles = [
   'world-scripts.plist.in',
   'equipment.plist.in',
+  'ForwardWeaponECU.crosshairs.plist.in',
 ]
 
 foreach infile : infiles

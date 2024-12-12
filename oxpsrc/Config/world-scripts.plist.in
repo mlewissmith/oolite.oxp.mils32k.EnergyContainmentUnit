@@ -3,4 +3,5 @@
 
 (
     "ShieldBoostersECU.js",
+    "ForwardWeaponECU.js",
 )

@@ -1,9 +1,9 @@
 // -*- javascript -*-
-// https://wiki.alioth.net/index.php/Oolite_JavaScript_Reference:_Equipment_scripts
+// https://wiki.alioth.net/index.php/Oolite_JavaScript_Reference:_Condition_scripts
 
 "use strict";
 
-this.name        = "@OXP_TITLE@:EQ_ECU_SHIELDBOOSTERS_LICENCE";
+this.name        = "@OXP_TITLE@:EQ_ECU_FORWARDWEAPON.conditions";
 this.author      = "@OXP_AUTHOR@";
 this.copyright   = "(C) 2024 @OXP_AUTHOR@";
 this.licence     = "@OXP_LICENSE@";
@@ -20,23 +20,17 @@ this._debug           = function(debug_message) { if (this.$debug_enabled) this.
 ////////////////////////////////////////////////////////////////////////////////
 // Internals
 
-this.$worldscriptName = "@OXP_TITLE@:ShieldBoostersECU";
+this.$worldscriptName = "@OXP_TITLE@:ForwardWeaponECU";
 this.$worldscript     = worldScripts[this.$worldscriptName];
 
 ////////////////////////////////////////////////////////////////////////////////
 // Event handlers
 
-this.activated = function() {
-    this.$worldscript._activateECU();
-}
-
-this.mode = function() {
-    this._debug( "mode()" );
-    this._debug( "name        : " + this.name );
-    this._debug( "author      : " + this.author );
-    this._debug( "copyright   : " + this.copyright );
-    this._debug( "license     : " + this.license );
-    this._debug( "description : " + this.description );
-    this._debug( "version     : " + this.version );
-    this._debug( "EQ_ECU_SHIELDBOOSTERS_LICENCE:" + (this.$worldscript.$active ? "ACTIVE" : "INACTIVE") );
+this.allowAwardEquipment = function(equipmentKey, ship, context) {
+    var allowedContext = ( context == "purchase" || context == "scripted" );
+    var validWeapon = this.$worldscript._forwardWeaponECU();
+    if ( allowedContext && validWeapon ) {
+        return true;
+    }
+    return false;
 }

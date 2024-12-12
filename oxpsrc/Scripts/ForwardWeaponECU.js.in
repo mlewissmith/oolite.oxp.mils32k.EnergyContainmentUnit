@@ -1,12 +1,9 @@
 // -*- javascript -*-
 // https://wiki.alioth.net/index.php/Oolite_JavaScript_Reference:_World_script_event_handlers
-//
-// Inspired by discussion at https://bb.oolite.space/viewtopic.php?p=284994#p284994
-// Original source released to public domain by 'hulo'
 
 "use strict";
 
-this.name        = "@OXP_TITLE@:ShieldBoostersECU";
+this.name        = "@OXP_TITLE@:ForwardWeaponECU";
 this.author      = "@OXP_AUTHOR@";
 this.copyright   = "(C) 2024 @OXP_AUTHOR@";
 this.licence     = "@OXP_LICENSE@";
@@ -24,39 +21,56 @@ this._debug         = function(debug_message) { if (this.$debug_enabled) this._l
 // Internals
 
 this.$active = false;
+this.$forwardWeapon = null;
+
+this._forwardWeaponECU = function() {
+    var weaponTable = {
+        "EQ_WEAPON_MILITARY_LASER":"EQ_WEAPON_ECU_MILITARY_LASER",
+    }
+    var forwardWeaponKey = player.ship.forwardWeapon.equipmentKey;
+    var forwardWeaponECU = weaponTable[forwardWeaponKey];
+    return forwardWeaponECU
+}
 
 this._activateECU = function() {
     if ( !this.$active ) {
-        this.$active = true;
         this._debug( "_activateECU()" );
-        player.consoleMessage("Shield Boosters ECU: activated");
+
+        var forwardWeaponECU = this._forwardWeaponECU();
+        if (forwardWeaponECU) {
+            this.$forwardWeapon = player.ship.forwardWeapon.equipmentKey;
+            player.ship.forwardWeapon = forwardWeaponECU;
+            player.ship.crosshairs = "ForwardWeaponECU.crosshairs.plist";
+            player.consoleMessage("Forward Weapon ECU: activated");
+            this.$active = true;
+        } else {
+            player.ship.setEquipmentStatus("EQ_ECU_FORWARDWEAPON", "EQUIPMENT_DAMAGED");
+            return false;
+        }
     }
 }
 
 this._deactivateECU = function() {
     if ( this.$active ) {
-        this.$active = false;
         this._debug( "_deactivateECU()" );
-        player.consoleMessage("Shield Boosters ECU: deactivated");
+
+        player.ship.forwardWeapon = this.$forwardWeapon;
+        this.$forwardWeapon = null;
+        player.ship.crosshairs = null;
+        player.consoleMessage("Forward Weapon ECU: deactivated");
+        this.$active = false;
     }
 }
 
 this._loseLicence = function() {
-    player.ship.removeEquipment("EQ_ECU_SHIELDBOOSTERS_LICENCE");
+    player.ship.removeEquipment("EQ_ECU_FORWARDWEAPON_LICENCE");
 }
 
 this._expireActiveLicence = function() {
     if ( this.$active ) {
         this._deactivateECU();
         this._loseLicence();
-        player.consoleMessage("Shield Boosters ECU: licence expired");
-    }
-}
-
-this._handleECU = function() {
-    if ( this.$active ) {
-        player.ship.aftShield     = player.ship.maxAftShield;
-        player.ship.forwardShield = player.ship.maxForwardShield;
+        player.consoleMessage("Forward Weapon ECU: licence expired");
     }
 }
 
@@ -75,17 +89,6 @@ this.startUp = function() {
 
 this.startUpComplete = function() {
     this._debug( "startUpComplete()" );
-}
-
-////////////////////////////////////////////////////////////////////////////////
-// Event handlers : combat
-
-this.shipBeingAttacked = function(whom) {
-    this._handleECU()
-}
-
-this.shipBeingAttackedByCloaked = function() {
-    this._handleECU()
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -109,11 +112,7 @@ this.equipmentAdded = function(equipmentKey) {
 this.equipmentDamaged = function(equipmentKey) {
     this._debug( "equipmentDamaged(" + equipmentKey + ")" );
 
-    if (equipmentKey == "EQ_SHIELD_BOOSTER") {
-        player.ship.setEquipmentStatus("EQ_ECU_SHIELDBOOSTERS", "EQUIPMENT_DAMAGED");
-    }
-
-    if (equipmentKey == "EQ_ECU_SHIELDBOOSTERS") {
+    if (equipmentKey == "EQ_ECU_FORWARDWEAPON") {
         this._expireActiveLicence();
         this._loseLicence();
     }
@@ -126,14 +125,14 @@ this.equipmentRemoved = function(equipmentKey) {
 this.playerBoughtEquipment = function(equipment, paid) {
     this._debug( "playerBoughtEquipment(" + equipment + "," + paid + ")" );
 
-    if (equipment == "EQ_ECU_SHIELDBOOSTERS_REMOVAL") {
-        var credits = EquipmentInfo.infoForKey("EQ_ECU_SHIELDBOOSTERS").price * 0.1;
+    if (equipment == "EQ_ECU_FORWARDWEAPON_REMOVAL") {
+        var credits = EquipmentInfo.infoForKey("EQ_ECU_FORWARDWEAPON").price * 0.1;
         var refundPc = 0.6;
         var refundCredits = credits * refundPc;
 
         this._loseLicence();
-        player.ship.removeEquipment("EQ_ECU_SHIELDBOOSTERS");
-        player.ship.removeEquipment("EQ_ECU_SHIELDBOOSTERS_REMOVAL");
+        player.ship.removeEquipment("EQ_ECU_MILITARY_LASER");
+        player.ship.removeEquipment("EQ_ECU_MILITARY_LASER_REMOVAL");
         player.credits += refundCredits;
     }
 }

@@ -3,6 +3,9 @@ fs = import('fs')
 infiles = [
   'ShieldBoostersECU.js.in',
   'EQ_ECU_SHIELDBOOSTERS_LICENCE.js.in',
+  'ForwardWeaponECU.js.in',
+  'EQ_ECU_FORWARDWEAPON_LICENCE.js.in',
+  'EQ_ECU_FORWARDWEAPON.conditions.js.in',
 ]
 
 foreach infile : infiles

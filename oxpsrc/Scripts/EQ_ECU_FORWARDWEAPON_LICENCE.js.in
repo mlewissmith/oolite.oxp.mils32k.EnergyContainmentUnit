@@ -3,7 +3,7 @@
 
 "use strict";
 
-this.name        = "@OXP_TITLE@:EQ_ECU_SHIELDBOOSTERS_LICENCE";
+this.name        = "@OXP_TITLE@:EQ_ECU_FORWARDWEAPON_LICENCE";
 this.author      = "@OXP_AUTHOR@";
 this.copyright   = "(C) 2024 @OXP_AUTHOR@";
 this.licence     = "@OXP_LICENSE@";
@@ -20,7 +20,7 @@ this._debug           = function(debug_message) { if (this.$debug_enabled) this.
 ////////////////////////////////////////////////////////////////////////////////
 // Internals
 
-this.$worldscriptName = "@OXP_TITLE@:ShieldBoostersECU";
+this.$worldscriptName = "@OXP_TITLE@:ForwardWeaponECU";
 this.$worldscript     = worldScripts[this.$worldscriptName];
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -38,5 +38,5 @@ this.mode = function() {
     this._debug( "license     : " + this.license );
     this._debug( "description : " + this.description );
     this._debug( "version     : " + this.version );
-    this._debug( "EQ_ECU_SHIELDBOOSTERS_LICENCE:" + (this.$worldscript.$active ? "ACTIVE" : "INACTIVE") );
+    this._debug( "EQ_ECU_FORWARDWEAPON_LICENCE:" + (this.$worldscript.$active ? "ACTIVE" : "INACTIVE") );
 }
