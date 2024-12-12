@@ -7,21 +7,18 @@ project(
 PROJECT_NAME     = meson.project_name()
 PROJECT_VERSION  = meson.project_version()
 PROJECT_LICENSE  = meson.project_license().get(0)
-PROJECT_TITLE    = 'EnergyContainmentUnit'
-PROJECT_AUTHOR   = 'mils32k'
-PROJECT_ID       = 'oolite.oxp.' + PROJECT_AUTHOR + '.' + PROJECT_TITLE
 
 oxp_cfg_data = configuration_data(
   {
-    'OXP_TITLE'       : PROJECT_TITLE,
-    'OXP_DESCRIPTION' : '[TODO]',
-    'OXP_AUTHOR'      : PROJECT_AUTHOR,
-    'OXP_IDENTIFIER'  : PROJECT_ID,
+    'OXP_TITLE'       : 'Energy Containment Unit',
+    'OXP_DESCRIPTION' : 'Enhancements to Standard Equipment.',
+    'OXP_AUTHOR'      : 'mlewissmith',
+    'OXP_IDENTIFIER'  : PROJECT_NAME,
     'OXP_VERSION'     : PROJECT_VERSION,
     'OXP_LICENSE'     : PROJECT_LICENSE,
     'OXP_OOLITE'      : '1.81',
     'OXP_CATEGORY'    : 'Misc',
-    'OXP_INFOURL'     : '[TODO]',
+    'OXP_INFOURL'     : 'https://github.com/mlewissmith/oolite.oxp.EnergyContainmentUnit',
   }
 )
 
