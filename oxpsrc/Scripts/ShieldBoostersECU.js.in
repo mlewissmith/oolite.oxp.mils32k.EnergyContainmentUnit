@@ -6,7 +6,7 @@
 
 "use strict";
 
-this.name        = "@OXP_TITLE@:ShieldBoostersECU";
+this.name        = "@OXP_IDENTIFIER@:ShieldBoostersECU";
 this.author      = "@OXP_AUTHOR@";
 this.copyright   = "(C) 2024 @OXP_AUTHOR@";
 this.licence     = "@OXP_LICENSE@";
