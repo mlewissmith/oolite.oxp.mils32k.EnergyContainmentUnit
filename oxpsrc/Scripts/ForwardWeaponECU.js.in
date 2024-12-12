@@ -25,6 +25,9 @@ this.$forwardWeapon = null;
 
 this._forwardWeaponECU = function() {
     var weaponTable = {
+        "EQ_WEAPON_PULSE_LASER":"EQ_WEAPON_ECU_PULSE_LASER",
+        "EQ_WEAPON_BEAM_LASER":"EQ_WEAPON_ECU_BEAM_LASER",
+        "EQ_WEAPON_MINING_LASER":"EQ_WEAPON_ECU_MINING_LASER",
         "EQ_WEAPON_MILITARY_LASER":"EQ_WEAPON_ECU_MILITARY_LASER",
     }
     var forwardWeaponKey = player.ship.forwardWeapon.equipmentKey;
