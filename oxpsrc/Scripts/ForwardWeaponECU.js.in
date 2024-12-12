@@ -3,7 +3,7 @@
 
 "use strict";
 
-this.name        = "@OXP_TITLE@:ForwardWeaponECU";
+this.name        = "@OXP_IDENTIFIER@:ForwardWeaponECU";
 this.author      = "@OXP_AUTHOR@";
 this.copyright   = "(C) 2024 @OXP_AUTHOR@";
 this.licence     = "@OXP_LICENSE@";

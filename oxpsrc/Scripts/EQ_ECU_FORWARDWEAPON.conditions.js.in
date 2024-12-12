@@ -3,7 +3,7 @@
 
 "use strict";
 
-this.name        = "@OXP_TITLE@:EQ_ECU_FORWARDWEAPON.conditions";
+this.name        = "@OXP_IDENTIFIER@:EQ_ECU_FORWARDWEAPON.conditions";
 this.author      = "@OXP_AUTHOR@";
 this.copyright   = "(C) 2024 @OXP_AUTHOR@";
 this.licence     = "@OXP_LICENSE@";
@@ -20,7 +20,7 @@ this._debug           = function(debug_message) { if (this.$debug_enabled) this.
 ////////////////////////////////////////////////////////////////////////////////
 // Internals
 
-this.$worldscriptName = "@OXP_TITLE@:ForwardWeaponECU";
+this.$worldscriptName = "@OXP_IDENTIFIER@:ForwardWeaponECU";
 this.$worldscript     = worldScripts[this.$worldscriptName];
 
 ////////////////////////////////////////////////////////////////////////////////
