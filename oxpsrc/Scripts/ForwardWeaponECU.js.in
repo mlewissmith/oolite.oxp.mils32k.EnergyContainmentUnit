@@ -13,7 +13,7 @@ this.version     = "@OXP_VERSION@";
 ////////////////////////////////////////////////////////////////////////////////
 // Debuggery
 
-this.$debug_enabled = true;
+this.$debug_enabled = false;
 this._log           = function(log_message) { log(this.name, log_message) }
 this._debug         = function(debug_message) { if (this.$debug_enabled) this._log(debug_message) }
 
