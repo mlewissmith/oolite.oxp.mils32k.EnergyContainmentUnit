@@ -61,7 +61,7 @@ this._handleECU = function() {
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-// Event handlers
+// Event handlers : startup
 
 this.startUp = function() {
     this._debug( "startUp()" );
@@ -78,6 +78,7 @@ this.startUpComplete = function() {
 }
 
 ////////////////////////////////////////////////////////////////////////////////
+// Event handlers : combat
 
 this.shipBeingAttacked = function(whom) {
     this._handleECU()
@@ -86,6 +87,9 @@ this.shipBeingAttacked = function(whom) {
 this.shipBeingAttackedByCloaked = function() {
     this._handleECU()
 }
+
+////////////////////////////////////////////////////////////////////////////////
+// Event handlers : end-of-flight
 
 this.shipWillDockWithStation = function(station) {
     this._expireActiveLicence();
@@ -96,6 +100,7 @@ this.shipWillEnterWitchspace = function(cause, destination) {
 }
 
 ////////////////////////////////////////////////////////////////////////////////
+// Event handlers : equipment add/remove
 
 this.equipmentAdded = function(equipmentKey) {
     this._debug( "equipmentAdded(" + equipmentKey + ")" );
