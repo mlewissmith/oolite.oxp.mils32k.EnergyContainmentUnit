@@ -11,7 +11,7 @@ PROJECT_LICENSE  = meson.project_license().get(0)
 oxp_cfg_data = configuration_data(
   {
     'OXP_TITLE'       : 'Energy Containment Unit',
-    'OXP_DESCRIPTION' : 'Enhancements to Standard Equipment (Shield Boosters, Pulse/Beam/Mining/Military Lasers) available to buy.',
+    'OXP_DESCRIPTION' : 'Energy Containment Unit enhancements to Standard Equipment available to buy.',
     'OXP_AUTHOR'      : 'mlewissmith',
     'OXP_IDENTIFIER'  : PROJECT_NAME,
     'OXP_VERSION'     : PROJECT_VERSION,
