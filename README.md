@@ -36,4 +36,7 @@ available to buy.
     - until next dock
     - until next hyperspace jump
 
+-------------------------------------------------------------------------------
 
+Inspired by [invulnerability to lasers](https://bb.oolite.space/viewtopic.php?p=284994#p284994)
+discussion referenced at https://wiki.alioth.net/index.php/Cheating
