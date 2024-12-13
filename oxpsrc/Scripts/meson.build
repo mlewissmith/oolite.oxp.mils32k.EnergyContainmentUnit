@@ -6,6 +6,7 @@ infiles = [
   'ForwardWeaponECU.js.in',
   'EQ_ECU_FORWARDWEAPON_LICENCE.js.in',
   'EQ_ECU_FORWARDWEAPON.conditions.js.in',
+  'EQ_WEAPON_ECU.conditions.js.in',
 ]
 
 foreach infile : infiles

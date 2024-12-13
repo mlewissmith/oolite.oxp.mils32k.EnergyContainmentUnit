@@ -1,0 +1,32 @@
+// -*- javascript -*-
+// https://wiki.alioth.net/index.php/Oolite_JavaScript_Reference:_Condition_scripts
+
+"use strict";
+
+this.name        = "@OXP_IDENTIFIER@:EQ_WEAPON_ECU.conditions";
+this.author      = "@OXP_AUTHOR@";
+this.copyright   = "(C) 2024 @OXP_AUTHOR@";
+this.licence     = "@OXP_LICENSE@";
+this.description = "@OXP_DESCRIPTION@";
+this.version     = "@OXP_VERSION@";
+
+////////////////////////////////////////////////////////////////////////////////
+// Debuggery
+
+this.$debug_enabled   = false;
+this._log             = function(log_message) { log(this.name, log_message) }
+this._debug           = function(debug_message) { if (this.$debug_enabled) this._log(debug_message) }
+
+////////////////////////////////////////////////////////////////////////////////
+// Event handlers
+
+this.allowAwardEquipment = function(equipmentKey, ship, context) {
+    this._debug( "allowAwardEquipment(" + equipmentKey + "," + ship + "," + context + ")" );
+
+    // equipment TL99 is deprecated
+    // not fully sure what's going on here...
+    // 'context' always seems to be 'purchase' despite call from script 'ForwardWeaponECU.js/_activateECU()'
+    // ... anyway, we don't allow sale at _any_ stations.
+    // EQ_WEAPON_ECU_XX_LASER must be swapped by activating EQ_ECU_FORWARDWEAPON
+    return player.ship.dockedStation?false:true;
+}

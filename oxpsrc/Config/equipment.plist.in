@@ -140,13 +140,14 @@
 
     // 3, 4000, "Pulse Laser", "EQ_WEAPON_PULSE_LASER", "High powered pulse laser, a basic defense configuration.",
     (
-        99, 0, "ECU Enhanced Pulse Laser",
+        0, 0, "ECU Enhanced Pulse Laser",
         "EQ_WEAPON_ECU_PULSE_LASER",
         "-NA-",
         {
             "available_to_all"       = yes;
             "available_to_NPCs"      = no;
             "available_to_player"    = yes;
+            "condition_script"       = "EQ_WEAPON_ECU.conditions.js";
             "damage_probability"     = 0;
             // weapon_info as EQ_WEAPON_PULSE_LASER
             weapon_info = {
@@ -163,13 +164,14 @@
 
     // 4, 10000, "Beam Laser", "EQ_WEAPON_BEAM_LASER", "Rapid cycle laser, delivers more energy in less time for more effective results.",
     (
-        99, 0, "ECU Enhanced Beam Laser",
+        0, 0, "ECU Enhanced Beam Laser",
         "EQ_WEAPON_ECU_BEAM_LASER",
         "-NA-",
         {
             "available_to_all"       = yes;
             "available_to_NPCs"      = no;
             "available_to_player"    = yes;
+            "condition_script"       = "EQ_WEAPON_ECU.conditions.js";
             "damage_probability"     = 0;
             // weapon_info as EQ_WEAPON_BEAM_LASER
             weapon_info = {
@@ -188,13 +190,14 @@
 
     // 10, 8000, "Mining Laser", "EQ_WEAPON_MINING_LASER", "High power, slow recharge. Ideal for mineral extraction from large asteroids.",
     (
-        99, 0, "ECU Enhanced Mining Laser",
+        0, 0, "ECU Enhanced Mining Laser",
         "EQ_WEAPON_ECU_MINING_LASER",
         "-NA-",
         {
             "available_to_all"       = yes;
             "available_to_NPCs"      = no;
             "available_to_player"    = yes;
+            "condition_script"       = "EQ_WEAPON_ECU.conditions.js";
             "damage_probability"     = 0;
             // weapon_info as EQ_WEAPON_MINING_LASER
             weapon_info           = {
@@ -214,13 +217,14 @@
 
     // 10, 60000, "Military Laser", "EQ_WEAPON_MILITARY_LASER", "Increased power beam laser, developed for Naval use.",
     (
-        99, 0, "ECU Enhanced Military Laser",
+        0, 0, "ECU Enhanced Military Laser",
         "EQ_WEAPON_ECU_MILITARY_LASER",
         "-NA-",
         {
             "available_to_all"       = yes;
             "available_to_NPCs"      = no;
             "available_to_player"    = yes;
+            "condition_script"       = "EQ_WEAPON_ECU.conditions.js";
             "damage_probability"     = 0;
             // weapon_info as EQ_WEAPON_MILITARY_LASER
             weapon_info = {
