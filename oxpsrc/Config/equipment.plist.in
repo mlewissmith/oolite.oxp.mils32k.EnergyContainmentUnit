@@ -48,7 +48,7 @@
     ),
     (
         3,                                // TL-1
-        5000,                             // Cr*10 (~1/10 cost of Shield Booster ECU)
+        1500,                             // Cr*10
         "Shield Boosters ECU Licence",    // Name
         "EQ_ECU_SHIELDBOOSTERS_LICENCE",  // ID
         // Description
@@ -114,7 +114,7 @@
     ),
     (
         3,                               // TL-1
-        2000,                            // Cr*10 (~1/10 cost of Weapon ECU)
+        2500,                            // Cr*10
         "Forward Weapon ECU Licence",    // Name
         "EQ_ECU_FORWARDWEAPON_LICENCE", // ID
         // Description
