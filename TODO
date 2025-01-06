@@ -1,17 +1,19 @@
 TODO
 
-- Wiki page
-  - page name (hence location)
-  - page contents
-  - upload OXZ
-  - backlinks
-    - https://wiki.alioth.net/index.php/Cheating
+[-] Wiki page
+  [-] page name (hence location)
+  [-] page contents
+  [-] backlinks
+    [-] https://wiki.alioth.net/index.php/Cheating
+  [-] upload OXZ
 
-- OXP/OXZ
-  - Finalise equipment costs
-  - determine final oxp ID
-    - oolite.oxp.mils32k.EnergyContainmentUnit
+[-] OXP/OXZ
+  [X] Finalise equipment costs
+  [X] determine final oxp ID
+    [X] oolite.oxp.mils32k.EnergyContainmentUnit
+  [-] Rewrite README per wiki page
+  [-] upload OXZ
 
-- Expansion Manager
-  - https://bb.oolite.space/viewtopic.php?p=293916#p293916
-  ? raise issue at https://github.com/OoliteProject/oolite-expansion-catalog
+[-] Expansion Manager
+  [-] raise issue at https://github.com/OoliteProject/oolite-expansion-catalog
+      ? https://bb.oolite.space/viewtopic.php?p=293916#p293916

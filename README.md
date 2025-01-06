@@ -1,4 +1,4 @@
-# oolite.oxp.EnergyContainmentUnit
+# Energy Containment Unit OXP
 
 Energy Contaiment Unit enhancements to
 [Standard Equipment](https://wiki.alioth.net/index.php/Oolite_Equipment)

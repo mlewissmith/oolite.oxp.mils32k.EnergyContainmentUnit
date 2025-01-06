@@ -1,7 +1,7 @@
 project(
-  'oolite.oxp.EnergyContainmentUnit',
+  'oolite.oxp.mils32k.EnergyContainmentUnit',
   license       : 'UNLICENSE',
-  version       : '0.2.1',
+  version       : '0.2.2',
 )
 
 PROJECT_NAME     = meson.project_name()
@@ -16,9 +16,9 @@ oxp_cfg_data = configuration_data(
     'OXP_IDENTIFIER'  : PROJECT_NAME,
     'OXP_VERSION'     : PROJECT_VERSION,
     'OXP_LICENSE'     : PROJECT_LICENSE,
-    'OXP_OOLITE'      : '1.81',
+    'OXP_OOLITE'      : '1.82',
     'OXP_CATEGORY'    : 'Misc',
-    'OXP_INFOURL'     : 'https://github.com/mlewissmith/oolite.oxp.EnergyContainmentUnit',
+    'OXP_INFOURL'     : 'https://github.com/mlewissmith/oolite.oxp.mils32k.EnergyContainmentUnit',
   }
 )
 
