@@ -16,7 +16,7 @@ oxp_cfg_data = configuration_data(
     'OXP_IDENTIFIER'  : PROJECT_NAME,
     'OXP_VERSION'     : PROJECT_VERSION,
     'OXP_LICENSE'     : PROJECT_LICENSE,
-    'OXP_OOLITE'      : '1.89',
+    'OXP_OOLITE'      : '1.90',
     'OXP_CATEGORY'    : 'Misc',
     'OXP_INFOURL'     : 'https://wiki.alioth.net/index.php/Energy_Containment_Unit_OXP',
   }
