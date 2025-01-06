@@ -95,14 +95,14 @@ this.shipWillDockWithStation = function(station) {
     this._expireActiveLicence();
 }
 
-this.shipWillEnterWitchspace = function(cause, destination) {
+this.shipWillEnterWitchspace = function(cause, destination) { // API 1.81
     this._expireActiveLicence();
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 // Event handlers : equipment add/remove
 
-this.equipmentAdded = function(equipmentKey) {
+this.equipmentAdded = function(equipmentKey) { // API 1.81
     this._debug( "equipmentAdded(" + equipmentKey + ")" );
 }
 
@@ -119,11 +119,11 @@ this.equipmentDamaged = function(equipmentKey) {
     }
 }
 
-this.equipmentRemoved = function(equipmentKey) {
+this.equipmentRemoved = function(equipmentKey) { // API 1.81
     this._debug( "equipmentRemoved(" + equipmentKey + ")" );
 }
 
-this.playerBoughtEquipment = function(equipment, paid) {
+this.playerBoughtEquipment = function(equipment, paid) { // API 1.89
     this._debug( "playerBoughtEquipment(" + equipment + "," + paid + ")" );
 
     if (equipment == "EQ_ECU_SHIELDBOOSTERS_REMOVAL") {
