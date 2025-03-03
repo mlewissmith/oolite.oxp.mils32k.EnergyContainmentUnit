@@ -16,7 +16,7 @@ $0 [ -O BUILDDIR ] [ -RCW ] TARGET...
    -C : meson setup --reconfigure
    -W : meson setup --wipe
 
-$0 -X tag TAG
+$0 -X tag NEWTAG [ PREVTAG ]
 EOF
 }
 
@@ -44,7 +44,15 @@ case $xmode in
         meson compile -v -C ${builddir} "$@"
         cp -v -t ${workdir} $(find $builddir -type f -name "*.oxz")
         ;;
-    tag) echo -e "$1\n $(git changelog -a -x -t $1)" | git tag -F - $1 ;;
+    tag)
+        if [[ -z ${2:-""} ]]
+        then
+            echo -e "$1\n $(git changelog --stdout --tag $1 --all)"          | git tag -F- $1
+        else
+            echo -e "$1\n $(git changelog --stdout --tag $1 --start-tag $2)" | git tag -F- $1
+            exit 1
+        fi
+        ;;
     *) usage ; exit 1 ;;
 esac
 
