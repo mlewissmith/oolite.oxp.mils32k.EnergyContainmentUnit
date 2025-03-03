@@ -1,7 +1,9 @@
 # Energy Containment Unit OXP
 
-Energy Contaiment Unit enhancements to
+Energy Containment Unit enhancements to
 [Standard Equipment](https://wiki.alioth.net/index.php/Oolite_Equipment)
+- Temporary invulnerability to lasers
+- Temporary forward weapon cooling
 
 ## Overview
 
