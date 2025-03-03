@@ -84,7 +84,7 @@ activation is only valid until the next dock or jump.
   - [BB thread](https://bb.oolite.space/viewtopic.php?t=21755)
   - Source, version archive, changelog on [github](https://github.com/mlewissmith/oolite.oxp.mils32k.EnergyContainmentUnit)
   - OXP wiki page: [Energy Containment Unit OXP](https://wiki.alioth.net/index.php/Energy_Containment_Unit_OXP)
-    - OXZ file page: [File:Oolite.oxp.mils32k.EnergyContainmentUnit.oxz](https://wiki.alioth.net/index.php/File:Oolite.oxp.mils32k.EnergyContainmentUnit.oxz)
+  - OXZ file page: [File:Oolite.oxp.mils32k.EnergyContainmentUnit.oxz](https://wiki.alioth.net/index.php/File:Oolite.oxp.mils32k.EnergyContainmentUnit.oxz)
 
 -------------------------------------------------------------------------------
 
