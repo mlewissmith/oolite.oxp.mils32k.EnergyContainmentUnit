@@ -2,7 +2,6 @@
 
 Energy Contaiment Unit enhancements to
 [Standard Equipment](https://wiki.alioth.net/index.php/Oolite_Equipment)
-available to buy.
 
 - **Shield Boosters ECU**
   - Tech Level 12, cost 4,900 Cr
@@ -11,7 +10,7 @@ available to buy.
   - Requires **Shield Boosters ECU Licence** to activate
   - Once activated, player's ship is **immune to lasers**. Energy from incoming laser fire is absorbed and used to charge ship's shields.
 - **Shield Booster ECU Licence**
-  - Tech Level 4, cost 500 Cr
+  - Tech Level 4, cost 150 Cr
   - Requires clean status to purchase.
   - Required to activate **Shield Boosters ECU**.
   - Activation lasts
@@ -29,7 +28,7 @@ available to buy.
   - Once activated, player's foward weapon **does not overheat**.
     Use of the ECU with any non-standard forward weapon will damage the ECU.
 - **Forward Weapon ECU Licence**
-  - Tech Level 4, cost 200 Cr
+  - Tech Level 4, cost 250 Cr
   - Requires clean status to purchase.
   - Required to activate **Forward Weapon ECU**.
   - Activation lasts
